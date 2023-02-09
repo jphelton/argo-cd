@@ -5,7 +5,7 @@ FROM docker.io/library/redis:7.0.5 as redis
 # architecture, so we create a symlink here to facilitate copying.
 RUN ln -s /usr/lib/$(uname -m)-linux-gnu /usr/lib/linux-gnu 
 
-FROM docker.io/library/node:12.18.4-buster as node
+FROM docker.io/library/node:18.14.0-buster as node
 
 FROM docker.io/library/golang:1.18 as golang
 
